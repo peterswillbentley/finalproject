@@ -1,6 +1,6 @@
 streamlit
 pandas
 matplotlib
-collections
+Counter
 numpy
 seaborn
