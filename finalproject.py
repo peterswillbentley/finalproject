@@ -72,8 +72,8 @@ def main():
     state = st.sidebar.selectbox('Select', states)
 
     # Pie Charts
-    st.subheader(f"{state} Pie Charts and Histograms")
-
+    st.subheader(f"{state} Pie Charts")
+    st.text("Paint Colour")
     # Paint
     paint = cars[cars["state"] == state.lower()]
     paint = paint["paint_color"]
@@ -86,6 +86,7 @@ def main():
     st.pyplot()
 
     # Fuel
+    st.text("Fuel Type")
     fuel = cars[cars["state"] == state.lower()]
     fuel = fuel["fuel"]
     fuel = [x for x in fuel if str(x) != 'nan']
@@ -97,6 +98,7 @@ def main():
     st.pyplot()
 
     # Drive Train
+    st.text("Drive Train")
     drive = cars[cars["state"] == state.lower()]
     drive = drive["transmission"]
     drive = [x for x in drive if str(x) != 'nan']
